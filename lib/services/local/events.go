@@ -71,7 +71,7 @@ func (e *EventsService) NewWatcher(ctx context.Context, watch services.Watch) (s
 		case types.KindClusterNetworkingConfig:
 			parser = newClusterNetworkingConfigParser(e.getClusterConfig)
 		case types.KindClusterAuthPreference:
-			parser = newAuthPreferenceParser()
+			parser = newAuthPreferenceParser(e.getClusterConfig)
 		case types.KindSessionRecordingConfig:
 			parser = newSessionRecordingConfigParser(e.getClusterConfig)
 		case services.KindClusterName:
@@ -410,14 +410,16 @@ func (p *clusterNetworkingConfigParser) translateMatching(event backend.Event) (
 	}
 }
 
-func newAuthPreferenceParser() *authPreferenceParser {
+func newAuthPreferenceParser(getClusterConfig getClusterConfigFunc) *authPreferenceParser {
 	return &authPreferenceParser{
-		simpleMatcher: simpleMatcher{matchPrefix: backend.Key(authPrefix, preferencePrefix, generalPrefix)},
+		simpleMatcher:    simpleMatcher{matchPrefix: backend.Key(authPrefix, preferencePrefix, generalPrefix)},
+		getClusterConfig: getClusterConfig,
 	}
 }
 
 type authPreferenceParser struct {
 	simpleMatcher
+	getClusterConfig getClusterConfigFunc
 }
 
 func (p *authPreferenceParser) translateMatching(event backend.Event) ([]services.Event, error) {
@@ -434,7 +436,14 @@ func (p *authPreferenceParser) translateMatching(event backend.Event) ([]service
 		if err != nil {
 			return nil, trace.Wrap(err)
 		}
-		return resourcesToEvents(event.Type, ap)
+		// To ensure backward compatibility, also emit an event indicating
+		// ClusterConfig change to legacy event consumers.  DELETE IN 8.0.0
+		clusterConfig, err := p.getClusterConfig()
+		if err != nil {
+			logrus.WithError(err).Warn("Failed to get cluster config.")
+			return resourcesToEvents(event.Type, ap)
+		}
+		return resourcesToEvents(event.Type, ap, clusterConfig)
 	default:
 		return nil, trace.BadParameter("event %v is not supported", event.Type)
 	}
