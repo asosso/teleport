@@ -56,8 +56,8 @@ type requestWatcher struct {
 type RequestEvent struct {
 	// Type is the operation type of the event.
 	Type OpType
-	// Request is the payload of the event. If Type
-	// is OpDelete, only the ID field will be filled.
+	// Request is the payload of the event.
+	// If Type is OpDelete, Only the ID is set.
 	Request Request
 }
 
