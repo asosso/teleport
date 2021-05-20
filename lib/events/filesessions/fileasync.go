@@ -27,6 +27,7 @@ import (
 	"time"
 
 	"github.com/gravitational/teleport"
+	"github.com/gravitational/teleport/api/types/apievents"
 	"github.com/gravitational/teleport/lib/defaults"
 	"github.com/gravitational/teleport/lib/events"
 	"github.com/gravitational/teleport/lib/session"
@@ -455,7 +456,7 @@ func (u *Uploader) upload(up *upload) error {
 		}
 	}()
 
-	var stream events.Stream
+	var stream apievents.Stream
 	status, err := up.readStatus()
 	if err != nil {
 		if !trace.IsNotFound(err) {
@@ -551,7 +552,7 @@ func (u *Uploader) upload(up *upload) error {
 
 // monitorStreamStatus monitors stream's status
 // and checkpoints the stream
-func (u *Uploader) monitorStreamStatus(ctx context.Context, up *upload, stream events.Stream, cancel context.CancelFunc) {
+func (u *Uploader) monitorStreamStatus(ctx context.Context, up *upload, stream apievents.Stream, cancel context.CancelFunc) {
 	defer cancel()
 	for {
 		select {

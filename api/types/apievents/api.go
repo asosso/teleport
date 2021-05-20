@@ -15,7 +15,7 @@ limitations under the License.
 */
 
 // Package events contains event related types and logic required by the Teleport API.
-package events
+package apievents
 
 import (
 	"context"

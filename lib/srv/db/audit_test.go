@@ -22,7 +22,7 @@ import (
 	"time"
 
 	"github.com/gravitational/teleport/api/types"
-	"github.com/gravitational/teleport/api/types/events"
+	events "github.com/gravitational/teleport/api/types/apievents"
 	libevents "github.com/gravitational/teleport/lib/events"
 
 	"github.com/gravitational/trace"

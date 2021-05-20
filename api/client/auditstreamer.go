@@ -21,7 +21,7 @@ import (
 	"sync"
 
 	"github.com/gravitational/teleport/api/client/proto"
-	"github.com/gravitational/teleport/api/types/events"
+	events "github.com/gravitational/teleport/api/types/apievents"
 
 	"github.com/gravitational/trace"
 	"github.com/gravitational/trace/trail"

@@ -31,7 +31,8 @@ import (
 	"github.com/jonboulle/clockwork"
 
 	"github.com/gravitational/teleport"
-	"github.com/gravitational/teleport/api/types/events"
+	"github.com/gravitational/teleport/api/types/apievents"
+	events "github.com/gravitational/teleport/api/types/apievents"
 	"github.com/gravitational/teleport/lib/defaults"
 	"github.com/gravitational/teleport/lib/fixtures"
 	"github.com/gravitational/teleport/lib/session"
@@ -300,8 +301,8 @@ func (a *AuditTestSuite) TestSessionRecordingOff(c *check.C) {
 	found, _, err := alog.SearchEvents(now.Add(-time.Hour), now.Add(time.Hour), defaults.Namespace, nil, 0, "")
 	c.Assert(err, check.IsNil)
 	c.Assert(found, check.HasLen, 3)
-	eventA, okA := found[0].(*SessionStart)
-	eventB, okB := found[1].(*SessionEnd)
+	eventA, okA := found[0].(*apievents.SessionStart)
+	eventB, okB := found[1].(*apievents.SessionEnd)
 	c.Assert(okA, check.Equals, true)
 	c.Assert(okB, check.Equals, true)
 	c.Assert(eventA.Login, check.Equals, username)

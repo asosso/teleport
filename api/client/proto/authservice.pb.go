@@ -12,7 +12,7 @@ import (
 	empty "github.com/golang/protobuf/ptypes/empty"
 	_ "github.com/golang/protobuf/ptypes/timestamp"
 	types "github.com/gravitational/teleport/api/types"
-	events "github.com/gravitational/teleport/api/types/events"
+	events "github.com/gravitational/teleport/api/types/apievents"
 	_ "github.com/gravitational/teleport/api/types/wrappers"
 	github_com_gravitational_teleport_api_types_wrappers "github.com/gravitational/teleport/api/types/wrappers"
 	grpc "google.golang.org/grpc"
