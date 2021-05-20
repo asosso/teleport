@@ -19,7 +19,18 @@ It also describes all article subsections and video content in one quick view to
 
 ## Product and Reference Documentation
 
-Our current Product and Reference Documentation topics are divided into thirteen (13) sections supporting the four (4) main products: Teleport Application Access, Teleport Server Access, Teleport Database Access, and Teleport Kubernetes Access along with a fifth for Teleport Cloud.
+Our current Product and Reference Documentation topics are divided into thirteen (13) sections supporting the four (4) main products: 
+
+1. Teleport Application Access
+2. Teleport Server Access
+3. Teleport Database Access
+4. Teleport Kubernetes Access 
+
+Along with a fifth for:
+
+5. Teleport Cloud.
+
+The documentation layout and structure is presently:
 
 - Home Section
     - Introduction
