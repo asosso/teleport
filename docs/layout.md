@@ -41,7 +41,7 @@ The documentation layout and structure is presently:
         - w/ Tile landing
 
     - [ ] Adopters
-        - [ ] Subsection: Who is using Teleport
+        - [ ] Who is using Teleport
 
     - [ ] Getting Started
         - [ ] Prerequisites
@@ -117,16 +117,17 @@ The documentation layout and structure is presently:
         - [ ] Running Teleport in production
         - [ ] Security considerations
 
-    - [ ] FAQ Article
+    - [ ] FAQ
         - Section-specific FAQ
         - [ ] Community FAQ
         - [ ] Whcih version of Teleport is supported
         - [ ] Commercial Teleport Editions
 
-    - [ ] Changelog Article
+    - [ ] Changelog
         - Teleport repository README is injected here.
 
 - [ ] Application Access Section
+
     - [ ] Introduction
         - [ ] Application Access
         - [ ] Demo
@@ -136,6 +137,7 @@ The documentation layout and structure is presently:
         - [ ] Example modern apps
         - w/ Tiles
         - w/ Video
+
    - [ ] Getting Started
         - [ ] Follow along with our video guide
         - [ ] Prerequisites
@@ -143,9 +145,36 @@ The documentation layout and structure is presently:
         - [ ] Step 2/3. Install and configure Teleport
         - [ ] Step 3/3. Access the application
         - [ ] Next steps
+
     - [ ] Guides
         - w/ Tiles
-        - [ ] Guides
+        - [ ] Connecting Web Apps
+            - [ ] Connecting Web Applications
+            - [ ] Start Auth/Proxy service
+            - [ ] Start application service with CLI
+            - [ ] Start application service with a config file
+            - [ ] Advanced options
+            - [ ] View applications in Teleport
+            - [ ] Logging out of applications
+        - [ ] Integrating with JWTs
+            - [ ] Integrating with JWTs
+            - [ ] Introduction to JWTs
+            - [ ] Validate JWT
+        - [ ] Applciation API Access
+            - [ ] Application API Acces
+            - [ ] Prequisites
+            - [ ] Accessing the API
+            - [ ] Application information
+
+    - [ ] Access Controls
+        - [ ] Assinging labels to applications
+        - [ ] Configuring application labels in roles
+        - [ ] Integrating with identity providers
+        - [ ] Next steps
+
+    - [ ] Reference
+        - [ ] Configuration
+        - [ ] CLI
 
 - [ ] Server Access Section
     - [ ] Introduction
