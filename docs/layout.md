@@ -39,10 +39,8 @@ The documentation layout and structure is presently:
         - [ ] What is Teleport
         - w/ Demo video
         - w/ Tile landing
-
     - [ ] Adopters
         - [ ] Who is using Teleport
-
     - [ ] Getting Started
         - [ ] Prerequisites
         - [ ] Follow along with our video guide
@@ -51,7 +49,6 @@ The documentation layout and structure is presently:
         - [ ] Step 3/4. Log in using tsh
         - [ ] Step 4/4. Have fun with Teleport!
         - [ ] Guides
- 
     - [ ] Installation
         - [ ] Linux
         - [ ] Docker
@@ -61,7 +58,6 @@ The documentation layout and structure is presently:
         - [ ] Installing from source
         - [ ] Checksums
         - [ ] Operating System support
-
     - [ ] User Manual
         - [ ] Introduction
         - [ ] Installing tsh
@@ -76,7 +72,6 @@ The documentation layout and structure is presently:
         - [ ] Using OpenSSH client
         - [ ] Troubleshooting
         - [ ] Getting help
-
     - [ ] Admin Manual
         - [ ] Installing
         - [ ] Definitions
@@ -108,7 +103,6 @@ The documentation layout and structure is presently:
         - [ ] License file
         - [ ] Troubleshooting
         - [ ] Getting help
-
     - [ ] Production Guide
         - [ ] Prerequisites
         - [ ] Designing your cluster
@@ -116,18 +110,14 @@ The documentation layout and structure is presently:
         - [ ] Installation
         - [ ] Running Teleport in production
         - [ ] Security considerations
-
     - [ ] FAQ
         - Section-specific FAQ
         - [ ] Community FAQ
         - [ ] Whcih version of Teleport is supported
         - [ ] Commercial Teleport Editions
-
     - [ ] Changelog
         - Teleport repository README is injected here.
-
 - [ ] Application Access Section
-
     - [ ] Introduction
         - [ ] Application Access
         - [ ] Demo
@@ -137,7 +127,6 @@ The documentation layout and structure is presently:
         - [ ] Example modern apps
         - w/ Tiles
         - w/ Video
-
    - [ ] Getting Started
         - [ ] Follow along with our video guide
         - [ ] Prerequisites
@@ -145,7 +134,6 @@ The documentation layout and structure is presently:
         - [ ] Step 2/3. Install and configure Teleport
         - [ ] Step 3/3. Access the application
         - [ ] Next steps
-
     - [ ] Guides
         - w/ Tiles
         - [ ] Connecting Web Apps
@@ -165,17 +153,14 @@ The documentation layout and structure is presently:
             - [ ] Prequisites
             - [ ] Accessing the API
             - [ ] Application information
-
     - [ ] Access Controls
         - [ ] Assinging labels to applications
         - [ ] Configuring application labels in roles
         - [ ] Integrating with identity providers
         - [ ] Next steps
-
     - [ ] Reference
         - [ ] Configuration
         - [ ] CLI
-
 - [ ] Server Access Section
     - [ ] Introduction
         - [ ] Server Access
@@ -184,7 +169,6 @@ The documentation layout and structure is presently:
         - [ ] Guides
         - w/ Demo video
         - w/ Tile landing
-
     - [ ] Getting Started
         - [ ] Getting Started
         - [ ] Prerequisites
@@ -197,11 +181,20 @@ The documentation layout and structure is presently:
         - [ ] Resources
         - w/ Diagrams
         - w/ Screenshots
-
     - [ ] Guides
         - [ ] Using Teleport with PAM
+            - [ ] Introduction to Pluggable Authentication Modules
+            - [ ] Set up PAM on a Linux Machine running Teleport
+            - [ ] Set Message of the Day (motd) with Teleport
+            - [ ] Custom environment variables
+            - [ ] Create local users with Teleport
+            - [ ] Additional authentication steps
         - [ ] OpenSSH Guide
-
+            - [ ] Overview
+            - [ ] Set up OpenSSH recording proxy mode
+            - [ ] Use OpenSSH client
+            - [ ] OpenSSH rate limiting
+            - [ ] Revoke an SSH certificate
 - [ ] Kubernetes Access Section
 
 - [ ] Database Access Section
