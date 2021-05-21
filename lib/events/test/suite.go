@@ -174,7 +174,7 @@ func (s *EventsSuite) SessionEventsCRUD(c *check.C) {
 	// read the session event
 	historyEvents, err := s.Log.GetSessionEvents(defaults.Namespace, sessionID, 0, false)
 	c.Assert(err, check.IsNil)
-	c.Assert(history, check.HasLen, 2)
+	c.Assert(historyEvents, check.HasLen, 2)
 	c.Assert(historyEvents[0].GetString(events.EventType), check.Equals, events.SessionStartEvent)
 	c.Assert(historyEvents[1].GetString(events.EventType), check.Equals, events.SessionEndEvent)
 
