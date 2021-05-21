@@ -28,7 +28,7 @@ Our current Product and Reference Documentation topics are divided into thirteen
 
 Along with a fifth for:
 
-5. Teleport Cloud.
+5. Teleport Cloud
 
 ## Product and Reference Documentation
 
@@ -43,13 +43,71 @@ The documentation layout and structure is presently:
     - [ ] Adopters
         - [ ] Subsection: Who is using Teleport
 
-    - [ ]  Getting Started
+    - [ ] Getting Started
+        - [ ] Prerequisites
+        - [ ] Follow along with our video guide
+        - [ ] Step 1/4. Install Teleport on a Linux machine
+        - [ ] Step 2/4. Create a Teleport user and set up two-factor authentication
+        - [ ] Step 3/4. Log in using tsh
+        - [ ] Step 4/4. Have fun with Teleport!
+        - [ ] Guides
  
     - [ ] Installation
+        - [ ] Linux
+        - [ ] Docker
+        - [ ] Helm
+        - [ ] MacOs
+        - [ ] Windows (tsh client only)
+        - [ ] Installing from source
+        - [ ] Checksums
+        - [ ] Operating System support
 
     - [ ] User Manual
+        - [ ] Introduction
+        - [ ] Installing tsh
+        - [ ] User identities
+        - [ ] Logging in
+        - [ ] Explorign the cluster
+        - [ ] Interactive shell
+        - [ ] Copying files
+        - [ ] Sharing sesssions
+        - [ ] Connecting to SSH clusters behind a load balancer
+        - [ ] Web UI
+        - [ ] Using OpenSSH client
+        - [ ] Troubleshooting
+        - [ ] Getting help
 
     - [ ] Admin Manual
+        - [ ] Installing
+        - [ ] Definitions
+        - [ ] Teleport Daemon
+        - [ ] Configuration
+        - [ ] Authentication
+        - [ ] Adding and deleting users
+        - [ ] Editing users
+        - [ ] Adding Nodes to the cluster
+        - [ ] Revoking invitations
+        - [ ] Adding a Node located behind NAT
+        - [ ] Labeling Nodes and applications
+        - [ ] Auding Log
+        - [ ] Resources
+        - [ ] Trusted Clusters
+        - [ ] GitHub Oath 2.0
+        - [ ] HTTP CONNECT proxies
+        - [ ] PAM integration
+        - [ ] Using Teleport with OpenSSH
+        - [ ] Certificate rotation
+        - [ ] Ansible integration
+        - [ ] Kubernetes integration
+        - [ ] Storage backeneds
+        - [ ] High Availability
+        - [ ] Upgrading Teleport
+        - [ ] Backing up Teleport
+        - [ ] GitOps
+        - [ ] Migrating backends
+        - [ ] License file
+        - [ ] Troubleshooting
+        - [ ] Getting help
 
     - [ ] Production Guide
         - [ ] Prerequisites
@@ -60,10 +118,13 @@ The documentation layout and structure is presently:
         - [ ] Security considerations
 
     - [ ] FAQ Article
-        - [ ] FAQ specific to Home Section
+        - Section-specific FAQ
+        - [ ] Community FAQ
+        - [ ] Whcih version of Teleport is supported
+        - [ ] Commercial Teleport Editions
 
     - [ ] Changelog Article
-        - [ ] Teleport repository README is injected here.
+        - Teleport repository README is injected here.
 
 - [ ] Application Access Section
     - [ ] Introduction
@@ -85,7 +146,6 @@ The documentation layout and structure is presently:
     - [ ] Guides
         - w/ Tiles
         - [ ] Guides
-
 
 - [ ] Server Access Section
     - [ ] Introduction
